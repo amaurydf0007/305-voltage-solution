@@ -142,12 +142,67 @@
 </section>
         <div style="overflow: hidden; border-radius: 8px; border: 2px solid #FFD700;">
             <img src="assets/images/carro de servicio.png" alt="Vehículo de Servicio" style="width: 100%; height: auto; object-fit: contain; transition: 0.5s;">
+            <img src="assets/images/vehiculo 1.png" alt="Vehículo de Servicio" style="width: 100%; height: 250px; object-fit: cover; transition: 0.5s;">
+        </div>
         </div>
         <div style="overflow: hidden; border-radius: 8px; border: 2px solid #FFD700;">
             <img src="assets/images/centro de mando.png" alt="Vehículo de Servicio" style="width: 100%; height: auto; object-fit: contain; transition: 0.5s;">
         </div>
-        <div style="overflow: hidden; border-radius: 8px; border: 2px solid #FFD700;">
-            <img src="assets/images/vehiculo 1.png" alt="Vehículo de Servicio" style="width: 100%; height: 250px; object-fit: cover; transition: 0.5s;">
+        <div <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; padding: 15px; background-color: #1a1a1a; border: 2px solid #FFD700; border-radius: 8px; text-align: center;">
+  
+  <!-- Icono 1: Inspección de 40 años -->
+  <div style="cursor: pointer;" onclick="document.getElementById('form-servicio').style.display='block'; document.getElementById('tipo-servicio').value='Inspección 40 Años';">
+    <img src="assets/images/icono-inspeccion.png" alt="Inspección 40 años" style="width: 60px; height: 60px; object-fit: contain;">
+    <p style="color: #ffffff; font-size: 12px; margin-top: 5px;">Inspección 40 Años</p>
+  </div>
+
+  <!-- Icono 2: Cargador Eléctrico -->
+  <div style="cursor: pointer;" onclick="document.getElementById('form-servicio').style.display='block'; document.getElementById('tipo-servicio').value='Cargador Eléctrico';">
+    <img src="assets/images/icono-cargador.png" alt="Cargador Eléctrico" style="width: 60px; height: 60px; object-fit: contain;">
+    <p style="color: #ffffff; font-size: 12px; margin-top: 5px;">Cargador Eléctrico</p>
+  </div>
+
+  <!-- Icono 3: Actualización LED -->
+  <div style="cursor: pointer;" onclick="document.getElementById('form-servicio').style.display='block'; document.getElementById('tipo-servicio').value='Actualización LED';">
+    <img src="assets/images/icono-luces.png" alt="Actualización LED" style="width: 60px; height: 60px; object-fit: contain;">
+    <p style="color: #ffffff; font-size: 12px; margin-top: 5px;">Luces LED</p>
+  </div>
+
+  <!-- Icono 4: Revisión de Servicio -->
+  <div style="cursor: pointer;" onclick="document.getElementById('form-servicio').style.display='block'; document.getElementById('tipo-servicio').value='Revisión de Servicio';">
+    <img src="assets/images/icono-servicio.png" alt="Revisión de Servicio" style="width: 60px; height: 60px; object-fit: contain;">
+    <p style="color: #ffffff; font-size: 12px; margin-top: 5px;">Revisión Servicio</p>
+  </div>
+
+</div>
+
+<!-- FORMULARIO QUE SE ABRE AL PINCHAR CUALQUIER ICONO -->
+<div id="form-servicio" style="display: none; margin-top: 20px; padding: 20px; background-color: #222; border: 1px solid #FFD700; border-radius: 8px; color: #fff;">
+  <h3 style="color: #FFD700; margin-top: 0;">Solicitar Detalles del Servicio</h3>
+  
+  <form action="https://formspree.io/f/mleypypv" method="POST" enctype="multipart/form-data">
+    
+    <!-- Campo oculto para saber qué servicio seleccionó -->
+    <input type="hidden" id="tipo-servicio" name="servicio_seleccionado" value="">
+
+    <!-- Subir Fotos -->
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: bold;">Subir fotos de la situación actual (Panel, luces, etc.):</label>
+      <input type="file" name="fotos_cliente" accept="image/*" multiple style="color: #fff;">
+    </div>
+
+    <!-- Comentarios y Notas -->
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: bold;">Notas o comentarios adicionales para el estimado:</label>
+      <textarea name="comentarios_cliente" rows="4" style="width: 100%; background-color: #333; color: #fff; border: 1px solid #555; border-radius: 4px; padding: 8px;" placeholder="Escribe aquí los detalles que nos ayuden a darte el mejor precio..."></textarea>
+    </div>
+
+    <!-- Botones -->
+    <button type="submit" style="background-color: #FFD700; color: #000; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer;">Enviar Detalles</button>
+    <button type="button" onclick="document.getElementById('form-servicio').style.display='none';" style="background-color: #555; color: #fff; border: none; padding: 10px 20px; margin-left: 10px; border-radius: 4px; cursor: pointer;">Cancelar</button>
+
+  </form>
+
         </div>
 
     </div>
