@@ -2,5 +2,6 @@
 body { background: var(--c-negro); color: var(--c-blanco); font-family: sans-serif; margin: 0; }
 header { padding: 20px; border-bottom: 3px solid var(--c-amarillo); display: flex; justify-content: space-between; align-items: center; }
 header img {width:80%; height:auto;}
-#hero { padding: 200px 5%; text-align: center; background: url("../images/fondo pantalla principa web site.png"); background-repeat: no-repeat color: var(--c-amarillo); }
+#hero { padding: 200px 5%; text-align: center; background: url("../images/fondo pantalla principa web site.png"); background-repeat: no-repeat color: var(--c-amarillo); 
+background-size: contain;}
 .sticky-bar { position: fixed; bottom: 0; width: 100%; background: #000; padding: 15px; text-align: center; border-top: 2px solid var(--c-amarillo); }
